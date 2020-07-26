@@ -1,5 +1,5 @@
 // iniciar a aplicação com dotenv
-//node -r dotenv/config  --experimental-modules index.js
+//node -r dotenv/config  --experimental-modules app.js
 import express from 'express';
 import mongoose from 'mongoose';
 import { studentRouter } from './routes/studentRouter.js';
@@ -29,4 +29,4 @@ const app = express();
 app.use(express.json());
 app.use(studentRouter);
 
-app.listen(3000, () => console.log('API Iniciada na porta 3000'));
+app.listen(process.env.PORT, () => console.log('API Iniciada na porta 3000'));
