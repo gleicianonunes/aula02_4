@@ -1,3 +1,5 @@
+// iniciar a aplicação com dotenv
+//node -r dotenv/config  --experimental-modules index.js
 import express from 'express';
 import mongoose from 'mongoose';
 import { studentRouter } from './routes/studentRouter.js';
